@@ -16,6 +16,7 @@ int main(void) {
 	if (ngay <0 || ngay >31 || thang <0 || thang >12)
 	{
 		printf("Khong hop le");
+		
 	}
 	else
 	{
@@ -24,6 +25,8 @@ int main(void) {
 		else
 			printf("Khong phai la Nam Nhuan");
 	}
+
+	
 
 
 	_getch();
