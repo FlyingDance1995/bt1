@@ -13,16 +13,20 @@ int main() {
 int Input() {
 	int n;
 	printf("Moi ban nhap vao so nguyen co 3 chu so: ");
-	scanf_s("%d", &n);
 
-	while (n < 100 || n > 999)
+	do
 	{
-		printf("\n Nhap Sai !!! \n Moi ban nhap lai !!! \n");
 		scanf_s("%d", &n);
+
+		if (n < 100 || n > 999) {
+			printf("Ban nhap sai !!!\nMoi ban nhap lai: ");
+		}
 	}
+
+	while (n < 100 || n > 999);
+
 	return n;
 }
-
 int Action(int m) {
 
 	int a;
@@ -34,8 +38,8 @@ int Action(int m) {
 	int c;
 	c = j / 10; // lay ra chu so dau tien : c 
 
-		// so sanh
-				
+				// so sanh
+
 	int temp;
 
 	if (a>b) {
@@ -57,5 +61,4 @@ int Action(int m) {
 	}
 
 	printf("\n%d%d%d", c, b, a);
-	return c, b, a;
 }
